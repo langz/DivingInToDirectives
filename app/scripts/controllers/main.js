@@ -1,17 +1,28 @@
 'use strict';
 
 /**
- * @ngdoc function
- * @name divingInToDirectivesApp.controller:MainCtrl
- * @description
- * # MainCtrl
- * Controller of the divingInToDirectivesApp
- */
+* @ngdoc function
+* @name divingInToDirectivesApp.controller:MainCtrl
+* @description
+* # MainCtrl
+* Controller of the divingInToDirectivesApp
+*/
 angular.module('divingInToDirectivesApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+.controller('MainCtrl', function ($scope) {
+  $scope.person = {
+    "name": "Anders Langseth",
+    "id" : 12345,
+    "work":[
+    {
+      "description": "Trying to learn Angular Directives",
+      "time": 120
+    },
+    {
+      "description": "Trying to learn Angular-UI Directives",
+      "time": 100
+    }
+    ],
+    "money" : 10,
+    "goodDay": true
+  };
+});
