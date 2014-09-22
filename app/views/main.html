@@ -14,8 +14,22 @@
 <myinputgroup linkid ="2" label="name" placeholder="placeholder2" ng-model="person.id"> </myinputgroup>
 </form>
 
-<input name="dateField" ng-model="date" ui-date>
-  <div class="form-horizontal">
-        <input type="text" datepicker-popup="dd/MM/yyyy" ng-model="dt" is-open="opened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" />
-        <button class="btn" ng-click="open()"><i class="icon-calendar"></i></button>
+
+    <pre>Selected date is: <em>{{dt | date:'fullDate' }}</em></pre>
+
+    <h4>Popup</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p class="input-group">
+              <input type="text" class="form-control" ng-model="dt" is-open="opened" show-button-bar="false" ng-required="true" datepicker-popup="dd.MM.yyyy"  />
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="open()"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+        </div>
     </div>
+
+<mydatepicker ng-model="person.date"></mydatepicker>
+<mydatepicker ng-model="person.date"></mydatepicker>
+
+<p>{{person.date}}</p>

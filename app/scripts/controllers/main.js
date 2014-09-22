@@ -10,19 +10,24 @@
 angular.module('divingInToDirectivesApp')
 .controller('MainCtrl', function ($scope) {
   $scope.person = {
-    "name": "Anders Langseth",
-    "id" : 12345,
-    "work":[
+    'name': 'Anders Langseth',
+    'id' : 12345,
+    'work':[
     {
-      "description": "Trying to learn Angular Directives",
-      "time": 120
+      'description': 'Trying to learn Angular Directives',
+      'time': 120
     },
     {
-      "description": "Trying to learn Angular-UI Directives",
-      "time": 100
+      'description': 'Trying to learn Angular-UI Directives',
+      'time': 100
     }
     ],
-    "money" : 10,
-    "goodDay": true
+    'money' : 10,
+    'goodDay': true,
+'date': ''
   };
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+  $scope.today();
 });
