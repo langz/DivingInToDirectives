@@ -12,7 +12,7 @@ angular.module('divingInToDirectivesApp')
     template: '<div class="row">'+
     '<div class="col-md-6">'+
     '<p class="input-group">'+
-    '<input type="text" class="form-control" ng-model="ngModel" is-open="opened" show-button-bar="false" ng-required="true" datepicker-popup="dd.MM.yyyy"  />'+
+    '<input type="text" class="form-control" ng-model="ngModel" is-open="opened" show-button-bar="false" ng-click="close($event)" ng-required="true" datepicker-popup="dd.MM.yyyy"  />'+
     '<span class="input-group-btn">'+
     '<button type="button" class="btn btn-default" ng-click="change($event)"><i class="glyphicon glyphicon-calendar"></i></button>'+
     '</span>'+
@@ -31,6 +31,12 @@ angular.module('divingInToDirectivesApp')
         $event.preventDefault();
         $event.stopPropagation();
         scope.opened = !scope.opened;
+      }
+      scope.close = function($event){
+
+        $event.preventDefault();
+        $event.stopPropagation();
+        scope.opened = false;
       }
     }
   };

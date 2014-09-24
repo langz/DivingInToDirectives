@@ -30,4 +30,6 @@ angular.module('divingInToDirectivesApp')
     $scope.dt = new Date();
   };
   $scope.today();
+
+$scope.search = undefined;
 });
