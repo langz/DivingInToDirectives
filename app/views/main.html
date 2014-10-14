@@ -1,3 +1,9 @@
+<script type="text/ng-template" id="customTemplate.html">
+  <a>
+
+      <span bind-html-unsafe="match.model.name + ' - ' + match.model.value | typeaheadHighlight:query"></span>
+  </a>
+</script>
 <div class="row marketing">
   <h3>{{person.name}} - {{person.id}} </h3>
 
@@ -22,5 +28,4 @@
 
 <mydatepicker ng-model="person.date"></mydatepicker>
 <p>{{person.date}}</p>
-<p>{{search}}</p>
 <mytypeahead my-directive-var="search"></mytypeahead>
